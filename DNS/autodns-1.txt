@@ -1,0 +1,5 @@
+zone=netfreevpn.xyz #เธเธทเนเธญเนเธ”เน€เธกเธ
+dnsrecord=freeth2.netfreevpn.xyz #เธเธทเนเธญ DNS
+email=dawrueng.vpn@gmail.com #email
+api_key=7143c8aa54b8f8e7fc249be5c3e17d46215c9 #api_key
+echo "./autodns $zone $dnsrecord $email $api_key" >> /etc/autostart

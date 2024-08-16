@@ -1,0 +1,15 @@
+#!/bin/bash
+clear 
+cr
+echo  ""
+echo  ""
+echo  ""
+echo -e "\033[1;35m { ------------------------------------------------- }  "
+echo -e "\033[1;35m { ------Script by San Soe-------- }  "
+echo -e "\033[1;35m { ------------------------------------------------- }  "
+read -p "กรอก DNS : " Login
+
+sed -i 's@#Neww@#Neww\nacl url4 dstdomain -i /$Login@g' /etc/squid/squid.conf
+
+/etc/init.d/squid restart
+/etc/init.d/squid3 restart

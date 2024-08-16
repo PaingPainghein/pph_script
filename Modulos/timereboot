@@ -1,0 +1,55 @@
+#!/bin/bash
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ Enter password root  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " pass
+
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ Time to order reboot when online 0 people  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " time
+rm -r /var/www/html/*
+
+echo "
+╭━━━━━━━━━━━━━━━━━━━━━━━╮"
+echo " ┈┣ Line Token  "
+echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
+read -p " : " token
+
+apt install php -y
+
+wget https://github.com/sansoe2022/sks_script/raw/main/Install/auto_rebot.zip
+
+unzip -o auto_rebot.zip
+
+mv /root/index.php /var/www/html
+mv /root/server_fix.php /var/www/html
+mv /root/Crypt /var/www/html
+mv /root/Math /var/www/html
+mv /root/Net /var/www/html
+mv /root/server /var/www/html
+
+cat > /var/spool/cron/crontabs/root <<-auto
+@daily /bin/verifatt
+@reboot /etc/autostart
+* * * * * /etc/autostart
+0 */6 * * * /bin/uexpired
+*/$time * * * * curl http://$(wget -qO- ipv4.icanhazip.com):82/server_fix.php
+@reboot /usr/bin/autoiptables
+auto
+
+sleep 4
+
+sed -i 's/xxxx/Spnet@1212/g' /var/www/html/server_fix.php
+
+/etc/init.d/cron reload
+
+clear
+echo "
+ตั้งค่าเสร็จเรียบร้อย
+"
+
+curl http://$(wget -qO- ipv4.icanhazip.com):82/server_fix.php
+sleep 5

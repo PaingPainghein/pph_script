@@ -1,0 +1,26 @@
+wget -O /usr/bin/dnsupdatea https://spnet-vpn.com/script/sshplus/DNS/dnsupdatea
+chmod +x /usr/bin/dnsupdatea
+
+
+#dns1
+zone=lolouch.com #เธเธทเนเธญเนเธ”เน€เธกเธ
+dnsrecord=*.vip4.lolouch.com #เธเธทเนเธญ DNS
+email=balajojo23@gmail.com #email
+api_key=f784fda9b707adb6ab5cacd551c7d682bf915 #api_key
+echo "dnsupdate $zone $dnsrecord $email $api_key" >> /etc/autostart
+
+
+#dns2
+zone=kguza.net #เธเธทเนเธญเนเธ”เน€เธกเธ
+dnsrecord=*.eight.kguza.net #เธเธทเนเธญ DNS
+email=wullopkk@gmail.com #email
+api_key=e5c7bbef36169d9828611957f9c7122f7b5b9 #api_key
+echo "dnsupdate $zone $dnsrecord $email $api_key" >> /etc/autostart
+
+
+#dns3
+zone=emzholy.net #เธเธทเนเธญเนเธ”เน€เธกเธ
+dnsrecord=*.eight.kguza.net #เธเธทเนเธญ DNS
+email=mr-emz@hotmail.com #email
+api_key=8212b39fbe4066de8dd7b3d9388f9901a8a0a #api_key
+echo "dnsupdate $zone $dnsrecord $email $api_key" >> /etc/autostart

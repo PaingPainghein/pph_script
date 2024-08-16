@@ -1,0 +1,70 @@
+#!/bin/bash
+clear
+fun_nginx() {
+	apt install nginx -y >/dev/null 2>&1
+	cat > /etc/nginx/nginx.conf <<END
+user www-data;
+worker_processes 2;
+pid /var/run/nginx.pid;
+events {
+ multi_accept on;
+        worker_connections 1024;
+}
+http {
+ autoindex on;
+        sendfile on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 65;
+        types_hash_max_size 2048;
+        server_tokens off;
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+        client_max_body_size 32M;
+ client_header_buffer_size 8m;
+ large_client_header_buffers 8 8m;
+ fastcgi_buffer_size 8m;
+ fastcgi_buffers 8 8m;
+ fastcgi_read_timeout 600;
+        include /etc/nginx/conf.d/*.conf;
+}
+END
+ mkdir -p /home/website
+ echo "<pre>Source by San Soe | Donate via TrueMoney Wallet : 0820731295</pre>" > /home/website/index.php
+ args='$args'
+ uri='$uri'
+ document_root='$document_root'
+ fastcgi_script_name='$fastcgi_script_name'
+ cat > /etc/nginx/conf.d/vps.conf <<END
+server {
+    listen 80;
+    server_name  127.0.0.1 localhost;
+    access_log /var/log/nginx/vps-access.log;
+    error_log /var/log/nginx/vps-error.log error;
+    root   /home/website;
+    location / {
+        index  index.html index.htm index.php;
+ try_files $uri $uri/ /index.php?$args;
+    }
+    location ~ \.php$ {
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass unix:/var/run/php/php5.6-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}
+END
+   apt update -y >/dev/null 2>&1
+   apt upgrade -y >/dev/null 2>&1
+	apt install ca-certificates apt-transport-https software-properties-common -y >/dev/null 2>&1
+	add-apt-repository ppa:ondrej/php -y >/dev/null 2>&1
+	apt-get install php5.6 php5.6-cli php5.6-cgi php5.6-fpm php5.6-gd php5.6-mysql php5.6-imap php5.6-curl php5.6-intl php5.6-pspell php5.6-recode php5.6-sqlite3 php5.6-tidy php5.6-xmlrpc php5.6-xsl php5.6-zip php5.6-mbstring php5.6-soap php5.6-opcache libicu65 php5.6-common php5.6-json php5.6-readline php5.6-xml -y >/dev/null 2>&1
+    service nginx restart
+}
+while true; do
+    echo 'verificando...'
+	fun_nginx > /dev/null 2>&1
+	sleep 15s
+done
