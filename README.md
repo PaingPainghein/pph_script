@@ -15,4 +15,4 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Pa
 ```
 
 ## 🔗: link
-https://sansoe2022.github.io/sks_script/
+https://github.com/PaingPainghein/pph_script.git
