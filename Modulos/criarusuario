@@ -7,8 +7,8 @@
 #====================================================
 echo ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[0;32m-        TRANSLATE BY San Soe  - Modified      -\033[0m"
-echo -e "\033[0;32m-              TELEGRAM ID : @sansoe2021           -\033[0m"
+echo -e "\033[0;32m-        TRANSLATE BY PaingPainghein  - Modified      -\033[0m"
+echo -e "\033[0;32m-              TELEGRAM ID : @pphdev           -\033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 IP=$(cat /etc/IP)

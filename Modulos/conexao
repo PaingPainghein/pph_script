@@ -783,7 +783,7 @@ ssl_certif() {
 #cat cert.pem key.pem >>/etc/stunnel/stunnel.pem
 #rm key.pem cert.pem >/dev/null 2>&1
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-cd /etc/stunnel && wget https://raw.githubusercontent.com/sansoe2022/sks_script/main/Sistema/script/stunnel.pem && cd $HOME
+cd /etc/stunnel && wget https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Sistema/script/stunnel.pem && cd $HOME
 }
 fun_bar 'ssl_certif'
 echo -e "\n\033[1;32mINICIANDO O SSL TUNNEL !\033[0m"
@@ -1325,7 +1325,7 @@ read -p " * เลือก ca ที่ต้องการ   ➡️  " ca
 3='spnet2'
 4='spnet3'
 cd /
-wget -q -O openvpn.tar https://raw.githubusercontent.com/sansoe2022/sks_script/main/Install/1234.tar
+wget -q -O openvpn.tar https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Install/1234.tar
 tar xf openvpn.tar
 rm openvpn.tar
 cd
@@ -1463,7 +1463,7 @@ if [[ "$IP" != "$IP2" ]]; then
 IP="$IP2"
 fi
 cat <<-EOF >/etc/openvpn/client-common.txt
-#Script by San Soe (SKS)
+#Script by PaingPainghein (SKS)
 #Auto Script OpenVPN
 auth-user-pass
 client
@@ -2156,7 +2156,7 @@ case $x in
 fun_openssh
 ;;
 2 | 02)
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://github.com/sansoe2022/sks_script/raw/main/install-proxy.sh && chmod +x install-proxy.sh && screen -S install-proxy.sh ./install-proxy.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://github.com/PaingPainghein/pph_script/raw/main/install-proxy.sh && chmod +x install-proxy.sh && screen -S install-proxy.sh ./install-proxy.sh
 menu
 ;;
 3 | 03)

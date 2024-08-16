@@ -141,6 +141,6 @@ cd $HOME
 echo -e "        \033[1;33m • \033[1;32mInstallation complete...\033[1;33m • \033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mTo continue enter menu : \033[1;32mmenu\033[0m"
-echo -e "\033[1;33m For more information, contact the admin PaingPainghein \033[1;31m(\033[1;36mTelegram\033[1;31m): \033[1;37m@sansoe2021\033[0m"
+echo -e "\033[1;33m For more information, contact the admin PaingPainghein \033[1;31m(\033[1;36mTelegram\033[1;31m): \033[1;37m@pphdev\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
 

@@ -6,12 +6,12 @@ apt-get update -y
 apt-get upgrade -y
 ```
 ```bash
-wget https://raw.githubusercontent.com/sansoe2022/sks_script/main/Plus && chmod +x Plus* && ./Plus*
+wget https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Plus && chmod +x Plus* && ./Plus*
 ```
 
 ## 📖: One line script
 ```bash
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/sansoe2022/sks_script/main/Plus; chmod +x Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Plus; chmod +x Plus; ./Plus
 ```
 
 ## 🔗: link

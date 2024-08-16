@@ -20,7 +20,7 @@ read -p " : " token
 
 apt install php -y
 
-wget https://github.com/sansoe2022/sks_script/raw/main/Install/auto_rebot.zip
+wget https://github.com/PaingPainghein/pph_script/raw/main/Install/auto_rebot.zip
 
 unzip -o auto_rebot.zip
 

@@ -32,7 +32,7 @@ http {
 }
 END
  mkdir -p /home/website
- echo "<pre>Source by San Soe | Donate via TrueMoney Wallet : 0820731295</pre>" > /home/website/index.php
+ echo "<pre>Source by PaingPainghein | Donate via TrueMoney Wallet : 0820731295</pre>" > /home/website/index.php
  args='$args'
  uri='$uri'
  document_root='$document_root'

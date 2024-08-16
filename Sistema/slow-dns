@@ -27,7 +27,7 @@ installslowdns() {
     wget -P $DIR sshplus.net/scripts/slow-dns/dns-server >/dev/null 2>&1  
     chmod 777 $DIR/dns-server >/dev/null 2>&1
     cd /etc/SSHPlus/dns >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/sansoe2022/sks_script/main/Sistema/server.pub && https://raw.githubusercontent.com/sansoe2022/sks_script/main/Sistema/server.pub >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Sistema/server.pub && https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Sistema/server.pub >/dev/null 2>&1
     cd >/dev/null 2>&1
     configdns() {
         interface=$(ip a |awk '/state UP/{print $2}'| cut -d: -f1)
@@ -80,7 +80,7 @@ initslow() {
         keypub=$(cat $DIR/server.pub)
         cd $HOME
         echo "ps x | grep 'slow_dns' | grep -v 'grep' || screen -dmS slow_dns $DIR/dns-server -udp :5300 -privkey-file /etc/SSHPlus/dns/server.key ${ns} 0.0.0.0:${ptdns}" >> /etc/autostart
-        tmx='curl -sO https://raw.githubusercontent.com/sansoe2022/sks_script/main/Modulos/slow_dns && chmod +x slow_dns && ./slow_dns'
+        tmx='curl -sO https://raw.githubusercontent.com/PaingPainghein/pph_script/main/Modulos/slow_dns && chmod +x slow_dns && ./slow_dns'
         echo -e "\n${GREEN}SLOWDNS ATIVADO !${SCOLOR}"
         echo -e "\n${YELLOW}COMANDO TERMUX${SCOLOR}: ${tmx} ${ns} ${keypub}"
         echo -ne "\n${RED}ENTER${YELLOW} para retornar ao${GREEN} MENU!${SCOLOR}"; read
