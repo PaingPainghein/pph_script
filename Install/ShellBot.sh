@@ -2594,7 +2594,7 @@ _EOF
 
 	ShellBot.createNewStickerSet()
 	{
-		local user_id name title png_sticker emojis contains_masks mask_position jq_obj
+		local user_id name title png_sticker emojis contains_maPPH mask_position jq_obj
 		
 		local param=$(getopt --name "$FUNCNAME" \
 							 --options 'u:n:t:s:e:c:m:' \
@@ -2634,9 +2634,9 @@ _EOF
 					emojis=$2
 					shift 2
 					;;
-				-c|--contains_masks)
+				-c|--contains_maPPH)
     				CheckArgType bool "$1" "$2"
-					contains_masks=$2
+					contains_maPPH=$2
 					shift 2
 					;;
 				-m|--mask_position)
@@ -2662,7 +2662,7 @@ _EOF
 									${title:+-F title="$title"} \
 									${png_sticker:+-F png_sticker="$png_sticker"} \
 									${emojis:+-F emojis="$emojis"} \
-									${contains_masks:+-F contains_masks="$contains_masks"} \
+									${contains_maPPH:+-F contains_maPPH="$contains_maPPH"} \
 									${mask_position:+-F mask_position="$mask_position"})
     	
 		# Testa o retorno do método
