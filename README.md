@@ -23,7 +23,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Pa
 ```
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?color=000000&center=true&vCenter=true&multiline=true&height=85&link=git%2Fby;PPH">
+<img src="https://readme-typing-svg.herokuapp.com?color=000000&center=true&vCenter=true&multiline=true&height=85&lines=PPH%2Fline%2Fby;Git">
 </p>
 
 
