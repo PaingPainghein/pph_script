@@ -1,9 +1,9 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: LIMITER SSHPLUS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	SCRIPT: LIMITER PaingPaingHEIN
+#	DESENVOLVIDO POR:	PPH VPN
+#	CONTATO TELEGRAM:	http://t.me/pphdev
+#	CANAL TELEGRAM:	http://t.me/pphdev
 #====================================================
 clear
 database="/root/usuarios.db"

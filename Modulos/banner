@@ -10,7 +10,7 @@ echo " ┈┣  Set the DNS to change.  "
 echo " ╰━━━━━━━━━━━━━━━━━━━━━━━╯"
 read -p " : " dns
 
-./autodns netfreevpn.xyz $dns sansoe5227@gmail.com 7143c8aa54b8f8e7fc249be5c3e17d46215c9
+./autodns netfreevpn.xyz $dns paingpainghein512@gmail.com 7143c8aa54b8f8e7fc249be5c3e17d46215c9
 
 clear
 echo "
